@@ -1,0 +1,100 @@
+﻿<form name="Form.Submission"
+	  novalidate
+	  ng-model-options="{updateOn:'default blur',debounce:{'default':250,'blur':0}}"
+	  role="form"
+	  autocomplete="off"
+	  ng-submit="Form.SubmitForm();">
+
+	<section class="formContainer radius">
+		<header class="radius-top">
+			<section class="grid-block">
+				<h3>
+					Registration
+				</h3>
+			</section>
+		</header>
+
+		<section class="formBody">
+			<section class="grid-block vertical">
+				<section class="grid-block">
+					<!--FIRST NAME-->
+					<div class="form-group" ng-class="{ 'hasError' : Form.HasError('FirstName') }">
+						<input type="text"
+							   placeholder="first name *"
+							   id="FirstName"
+							   name="FirstName"
+							   alt="first name"
+							   ng-model="Form.Criteria.FirstName"
+							   floating-validation
+							   required />
+					</div>
+				</section>
+				<section class="grid-block">
+					<!--LAST NAME-->
+					<div class="form-group" ng-class="{ 'hasError' : Form.HasError('LastName') }">
+						<input type="text"
+							   placeholder="last name *"
+							   id="LastName"
+							   name="LastName"
+							   alt="last name"
+							   ng-model="Form.Criteria.LastName"
+							   floating-validation
+							   required />
+					</div>
+				</section>
+				<section class="grid-block">
+					<!--EMAIL ADDRESS-->
+					<div class="form-group" ng-class="{ 'hasError' : Form.HasError('EmailAddress') }">
+						<input type="email"
+							   placeholder="email address *"
+							   id="EmailAddress"
+							   name="EmailAddress"
+							   alt="email address"
+							   ng-model="Form.Criteria.EmailAddress"
+							   floating-validation
+							   required />
+					</div>
+				</section>
+				<section class="grid-block">
+					<!--PASSWORD-->
+					<div class="form-group" ng-class="{ 'hasError' : Form.HasError('Password') }">
+						<input type="password"
+							   placeholder="password *"
+							   id="Password"
+							   name="Password"
+							   alt="password"
+							   ng-model="Form.Criteria.Password"
+							   floating-validation
+							   required />
+					</div>
+				</section>
+			</section>
+		</section>
+
+		<footer class="radius-bottom">
+			<section class="grid-block">
+				<section class="grid-block">
+					<dl class="horizontalList">
+						<dd>
+							<small>* required</small>
+						</dd>
+					</dl>
+				</section>
+				<section class="grid-block align-right">
+					<dl class="horizontalList">
+						<dd>
+							<a ng-click="DoCancelClick()">
+								Cancel
+							</a>
+						</dd>
+						<dd>
+							<button class="button radius">
+								Register
+							</button>
+						</dd>
+					</dl>
+				</section>
+			</section>
+		</footer>
+	</section>
+</form>

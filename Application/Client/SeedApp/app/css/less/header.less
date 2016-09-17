@@ -1,0 +1,286 @@
+﻿@import "variables";
+
+h1
+{
+	color: @colorFlatFont;
+	font-family: MullerBold;
+	font-size: 2rem;
+	font-weight: bold;
+	margin: 0;
+	letter-spacing: 3px;
+
+	&.logo
+	{
+		background-image: url("images/logo.png");
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: inherit;
+		font-size: 0;
+		height: 44px;
+		text-indent: -10000px;
+		width: 150px;
+	}
+}
+
+h2
+{
+	font-family: MullerBold;
+	font-size: 1.75rem;
+	font-weight: bold;
+	margin: 0;
+}
+
+h3
+{
+	font-family: MullerLight;
+	font-size: 1.5rem;
+	font-weight: bold;
+	margin: 0;
+
+	span
+	{
+		color: @colorLightGray;
+		display: inline-block;
+		font-size: 1rem;
+		margin-left: 0.125rem;
+	}
+}
+
+h4
+{
+	font-family: MullerLight;
+	font-size: 1.25rem;
+	margin: 0;
+}
+
+h5
+{
+	font-family: MullerLight;
+	font-size: 1rem;
+	margin: 0;
+}
+
+h6
+{
+	font-family: MullerLight;
+	font-size: 0.875rem;
+	margin: 0;
+}
+
+
+.siteNavigation
+{
+	i.fa-plus-circle
+	{
+		background-color: #448bc1;
+		background-image: -moz-linear-gradient(center top, #6bbcf9, #448bc1);
+		color: #fff;
+		cursor: pointer;
+		line-height: 2.5rem;
+		padding: 0.35rem 0.75rem;
+	}
+
+	.menu-bar
+	{
+		overflow: inherit;
+
+		> li
+		{
+			position: relative;
+
+			&.active
+			{
+				background-color: @colorSecondary;
+			}
+
+			> a
+			{
+				&:hover
+				{
+					background-color: @colorSecondaryHover !important;
+				}
+			}
+		}
+	}
+}
+
+
+.breadCrumbContainer
+{
+	background-color: #fafafa;
+	border-bottom: 1px solid #ebebeb;
+	width: 100%;
+}
+
+
+nav.breadcrumb
+{
+	background: none repeat scroll 0 0 @breadCrumbBackground;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row;
+
+	div
+	{
+		background: none repeat scroll 0 0 @breadCrumbBackground;
+		height: @breadCrumbHeight;
+		line-height: @breadCrumbHeight;
+		margin: 0;
+		padding: 0 0.25rem 0 0.75rem;
+		white-space: nowrap;
+
+		&.Title
+		{
+			background: none repeat scroll 0 0 @breadCrumbBackgroundSubtitle;
+			color: @colorFlatFont;
+			margin: 0;
+			padding-right: 2px;
+
+			a
+			{
+				color: @breadCrumbFontSubtitle;
+				font-family: OpenSansSemibold;
+				font-size: 0.75rem;
+				padding-left: 18px;
+
+				&:before
+				{
+					border-left: medium 2px;
+				}
+
+				&:after
+				{
+					border-left: 20px solid @breadCrumbBackgroundSubtitle;
+				}
+			}
+		}
+
+		&.SubTitle
+		{
+			background: none;
+			color: @colorFlatFont;
+			font-size: 0.75rem;
+			margin: 0 0 0 1rem;
+		}
+	}
+
+	a
+	{
+		color: @breadCrumbFont;
+		display: block;
+		float: left;
+		font-family: OpenSansLight;
+		font-size: 1rem;
+		font-weight: normal;
+		line-height: @breadCrumbHeight;
+		position: relative;
+
+		&:before
+		{
+			border-bottom: 20px solid @breadCrumbBorderSubtitle;
+			border-left: 20px solid @breadCrumbBorderDark;
+			border-top: 20px solid @breadCrumbBorderSubtitle;
+			content: " ";
+			display: block;
+			height: 0;
+			left: 100%;
+			margin-left: 3px;
+			margin-top: -20px;
+			position: absolute;
+			top: 50%;
+			width: 0;
+			z-index: 1;
+		}
+
+		&:after
+		{
+			border-bottom: 20px solid @breadCrumbBorderSubtitle;
+			border-left: 20px solid @breadCrumbBackground;
+			border-top: 20px solid @breadCrumbBorderSubtitle;
+			content: " ";
+			display: block;
+			height: 0;
+			left: 100%;
+			margin-left: 2px;
+			margin-top: -20px;
+			position: absolute;
+			top: 50%;
+			width: 0;
+			z-index: 2;
+		}
+	}
+}
+
+
+section#QuickAddContainer
+{
+	background-color: @backgroundFlatBlack;
+	display: none;
+	padding: 0;
+	position: absolute;
+	right: 0;
+	top: 50px;
+	width: 180px;
+	z-index: 10000;
+
+	ul
+	{
+		margin: 0;
+
+		> li
+		{
+			color: #fff;
+			cursor: pointer;
+			font-size: 0.75rem;
+			list-style: none outside none;
+			margin: 0;
+			padding: 0 0.25rem;
+
+
+			&:hover
+			{
+				background-color: #272727;
+			}
+
+			&.divider
+			{
+				border-color: -moz-use-text-color -moz-use-text-color #4e4e4e;
+				border-style: none none solid;
+				border-width: medium medium 1px;
+				clear: none;
+				height: 1px;
+				margin: 0;
+				padding: 0;
+			}
+
+			a
+			{
+				color: #fff;
+				display: inline-block;
+				padding: 0.75rem;
+				width: 100%;
+
+				&:hover
+				{
+					color: #448bc1;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+/* MEDIUM SCREENS - min-width 640px */
+@media only screen and (min-width: 40rem)
+{
+}
+
+
+/* LARGE SCREENS - min-width 1200px */
+@media only screen and (min-width: 75rem)
+{
+}

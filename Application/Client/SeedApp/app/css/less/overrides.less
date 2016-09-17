@@ -1,0 +1,106 @@
+﻿@import "variables";
+
+ul, ol, li, dl, dd, p, button, .button, dl dd,
+input[type="file"],
+input[type="checkbox"],
+input[type="radio"],
+select, input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea
+{
+	margin: 0;
+}
+
+button, .button
+{
+	background-color: @colorPrimary;
+	color: @colorWhite;
+
+	&:hover
+	{
+		background-color: @colorPrimaryHover;
+		color: @colorWhite;
+	}
+
+	&.radius
+	{
+		-moz-border-radius: 0.325rem;
+		-webkit-border-radius: 0.325rem;
+		border-radius: 0.325rem;
+	}
+}
+
+button.secondary, .button.secondary
+{
+	background-color: @colorSecondary;
+	color: @colorWhite;
+
+	&:hover
+	{
+		background-color: @colorSecondaryHover;
+		color: @colorWhite;
+	}
+}
+
+.close-button
+{
+	z-index: 1000;
+}
+
+.block-list
+{
+	margin-left: inherit;
+	margin-right: inherit;
+}
+
+.grid-block
+{
+	/*border: solid 1px @border;*/
+	overflow: inherit;
+}
+
+.grid-content
+{
+}
+
+.grid-container
+{
+    max-width: 62.5rem;
+}
+
+.noPadding
+{
+	padding: 0;
+}
+
+.align-center,
+.align-left
+{
+	/*border: 1px solid red;*/
+	margin: auto 0;
+	padding: 0.5rem 0;
+}
+
+
+
+/* MEDIUM SCREENS - min-width 640px */
+@media only screen and (min-width: 40rem)
+{
+}
+
+
+/* LARGE SCREENS - min-width 1200px */
+@media only screen and (min-width: 75rem)
+{
+}

@@ -1,0 +1,12 @@
+bin
+*.user
+node_modules
+packages
+obj
+*.suo
+_builds
+Generated
+bower_components
+Wireframes
+Documents
+Design

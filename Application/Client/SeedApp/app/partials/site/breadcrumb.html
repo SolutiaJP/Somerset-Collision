@@ -1,0 +1,19 @@
+﻿<nav class="breadcrumb">
+	<section class="flex-container-left ">
+		<div>
+			<a href="" ng-click="GoToHomeState()" class="show-for-medium-up">
+				<i class="fa fa-home"></i>
+				Home
+			</a>
+			<a href="" ng-click="GoToHomeState()" class="show-for-small-only">
+				<i class="fa fa-home"></i>
+			</a>
+		</div>
+		<div class="Title" ng-if="Breadcrumbs.sectionName">
+			<a href="" ng-click="Breadcrumbs.onSectionClick()">{{Breadcrumbs.sectionName}}</a>
+		</div>
+		<div class="SubTitle" ng-if="Breadcrumbs.pageName">
+			{{Breadcrumbs.pageName}}
+		</div>
+	</section>
+</nav>

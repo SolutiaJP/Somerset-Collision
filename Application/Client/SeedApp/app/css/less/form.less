@@ -1,0 +1,200 @@
+﻿@import "variables";
+
+form
+{
+	margin: 0;
+
+	input[type="text"],
+	input[type="password"],
+	input[type="date"],
+	input[type="datetime"],
+	input[type="datetime-local"],
+	input[type="month"],
+	input[type="week"],
+	input[type="email"],
+	input[type="number"],
+	input[type="search"],
+	input[type="tel"],
+	input[type="time"],
+	input[type="url"],
+	input,
+	textarea,
+	select
+	{
+		background-color: #fff;
+		border: 0;
+		border-bottom: solid 1px #ccc;
+		-moz-border-radius: 0;
+		-webkit-border-radius: 0;
+		border-radius: 0;
+		box-sizing: border-box;
+		color: rgba(0, 0, 0, 0.75);
+		display: block;
+		font-family: OpenSansRegular;
+		font-size: 1.25rem;
+		height: 2.3125rem;
+		margin: 0;
+		padding: 0 0.5rem;
+		transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+		width: 100%;
+
+		&:focus,
+		&:hover
+		{
+			border: 0;
+			border-bottom: solid 1px #ccc;
+			outline: 0 none;
+		}
+	}
+
+	input[type="checkbox"],
+	input[type="radio"]
+	{
+		display: inline;
+		height: auto;
+		width: auto;
+
+		+ label
+		{
+			display: inline-block;
+			font-size: 0.75rem;
+			margin: 0;
+		}
+	}
+
+	textarea
+	{
+		height: 8rem;
+	}
+
+
+	input:-moz-placeholder
+	{
+		color: @colorPlaceholder !important;
+		font-family: OpenSansRegular;
+		font-size: @sizePlaceholderFont;
+		text-transform: lowercase;
+	}
+	::-webkit-input-placeholder 
+	{
+		color: @colorPlaceholder !important;
+		font-family: OpenSansRegular;
+		font-size: @sizePlaceholderFont;
+		text-transform: lowercase;
+	}
+	:-moz-placeholder	/* Firefox 18- */
+	{ 
+		color: @colorPlaceholder !important;
+		font-family: OpenSansRegular;
+		font-size: @sizePlaceholderFont;
+		text-transform: lowercase;
+	}
+	::-moz-placeholder	/* Firefox 19+ */
+	{
+		color: @colorPlaceholder !important;
+		font-family: OpenSansRegular;
+		font-size: @sizePlaceholderFont;
+		text-transform: lowercase;
+	}
+	:-ms-input-placeholder 
+	{  
+		color: @colorPlaceholder !important;
+		font-family: OpenSansRegular;
+		font-size: @sizePlaceholderFont;
+		text-transform: lowercase;  
+	}
+
+
+	label
+	{
+		font-family: OpenSansRegular;
+		font-size: 0.75rem;
+		color: @colorDarkBlue;
+		line-height: inherit;
+		margin: 0;
+
+		&.required
+		{
+			font-family: QuatroSlabSemiBold;
+		}
+	}
+
+	.form-group
+	{
+		margin: 0 0 1.25rem 0;
+		margin-bottom: 1.25rem;
+		position: relative;
+		width: 100%;
+	}
+}
+
+
+.formContainer
+{
+	border: solid 1px @border;
+	border-radius: 0.325rem;
+	width: 18rem;
+
+	header
+	{
+		background-color: @background;
+		-webkit-border-top-left-radius: 0.325rem;
+		border-top-left-radius: 0.325rem;
+		-webkit-border-top-right-radius: 0.325rem;
+		border-top-right-radius: 0.325rem;
+		padding: 0 1rem;
+
+		h3
+		{
+			line-height: 2;
+		}
+
+		dl
+		{
+			line-height: 3.5rem;
+		}
+
+		i.fa-circle
+		{
+			color: @colorSecondary;
+		}
+	}
+
+	.formBody
+	{
+		background-color: @colorWhite;
+		padding: 1.5rem 1rem 0.5rem;
+	}
+
+	footer
+	{
+		background-color: @background;
+		-webkit-border-bottom-left-radius: 0.325rem;
+		border-bottom-left-radius: 0.325rem;
+		-webkit-border-bottom-right-radius: 0.325rem;
+		border-bottom-right-radius: 0.325rem;
+		padding: 0 1rem;
+
+		dl
+		{
+			line-height: 3.5;
+		}
+	}
+}
+
+
+
+/* MEDIUM SCREENS - min-width 640px */
+@media only screen and (min-width: 40rem)
+{
+	.formContainer
+	{
+		width: 30rem;
+	}
+}
+
+
+/* LARGE SCREENS - min-width 1200px */
+@media only screen and (min-width: 75rem)
+{
+}

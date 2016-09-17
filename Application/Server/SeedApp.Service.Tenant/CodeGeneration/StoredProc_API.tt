@@ -1,0 +1,19 @@
+﻿<#@ template language="C#" hostspecific="True" debug="True" #>
+<#@ assembly name="System.Reflection" #>
+<#@ assembly name="$(SolutionDir)\SeedAppTenant.DataContracts\bin\Debug\SeedAppTenant.DataContracts.dll" #>
+<#@ include file="T4Toolbox.tt" #>
+<#@ include file="C:\ProjectStoreGit\Solutia-CodeGenerator\Application\CodeGenerator\CodeGenerator\CodeGen\StoredProcCodeGenerator.tt" #><#
+
+	var path = @"C:\ProjectStoreGit\Solutia-Seed-Angular-ZurbApp\Application\Server\SeedApp.Service.Tenant\SeedAppTenant.DataContracts\bin\Debug\SeedAppTenant.DataContracts.dll";
+	var assembly = System.Reflection.Assembly.Load(System.Reflection.AssemblyName.GetAssemblyName(path));	
+
+	var storedProcCodeGenerator = new StoredProcCodeGenerator();
+	storedProcCodeGenerator.ConnectionString = @"Data Source=localhost;Initial Catalog=SeedAppTenant;Integrated Security=True";
+    storedProcCodeGenerator.DatabaseName = "SeedAppTenant";
+	storedProcCodeGenerator.NameSpace = "SeedAppTenant";											  
+    storedProcCodeGenerator.ProjectRootPath = "C:\\ProjectStoreGit\\Solutia-Seed-Angular-ZurbApp\\Application\\Server\\SeedApp.Service.Tenant\\SeedAppTenant.";
+	storedProcCodeGenerator.ProjectName = "SeedAppTenant";
+	storedProcCodeGenerator.CodeGenerationSchemaName = "API";
+	storedProcCodeGenerator.InterfaceAssembly = assembly;
+	storedProcCodeGenerator.Run();
+#>

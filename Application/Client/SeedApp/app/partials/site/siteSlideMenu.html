@@ -1,0 +1,34 @@
+﻿<section>
+	<zf-offcanvas id="siteSlideMenu" position="left">
+
+		<header>
+			<h1 class="logo">Seed App</h1>
+		</header>
+
+		<nav>
+			<dl>
+				<dd ng-class="{'active': (IsHomeState())}">
+					<a zf-close="siteSlideMenu" ng-click="GoToHomeState()">
+						Home
+					</a>
+				</dd>
+				<dd ng-class="{'active': (IsAboutState())}">
+					<a zf-close="siteSlideMenu" ng-click="GoToAboutState()">
+						About
+					</a>
+				</dd>
+				<dd>
+					<a zf-close="siteSlideMenu" ng-click="Logout()">
+						Logout
+					</a>
+				</dd>				
+			</dl>
+		</nav>
+
+		<section class="closeContainer">
+			<a zf-close="" class="close-button">
+				<i class="fa fa-close"></i>
+			</a>
+		</section>
+	</zf-offcanvas>
+</section>

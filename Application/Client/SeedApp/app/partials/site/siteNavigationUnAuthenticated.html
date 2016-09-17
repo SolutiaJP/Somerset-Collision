@@ -1,0 +1,58 @@
+﻿<section class="siteNavigation">
+	<section class="show-for-small-only">
+		<header class="primary title-bar">
+			<div class="center title">
+				<h1 class="logo">{{Title}}</h1>
+			</div>
+			<span class="left">
+				<a ng-click="GoBack()" ng-if="(ShowBackButton)">
+					<i class="fa fa-arrow-left"></i>
+					Back
+				</a>
+				<a zf-open="siteSlideMenu" ng-if="(!ShowBackButton)">
+					<i class="fa fa-bars"></i>
+				</a>
+			</span>
+		</header>
+	</section>
+
+	<section class="show-for-medium">
+		<header>
+			<ul class="menu-bar primary large-condense large-align-center medium-expand large-text-center">
+				<li><h1 class="logo">{{Title}}</h1></li>
+				<li ng-class="{'active': (IsHomeState())}">
+					<a ng-click="GoToHomeState()">
+						Home
+					</a>
+				</li>
+				<li ng-class="{'active': (IsAboutState())}">
+					<a ng-click="GoToAboutState()">
+						About
+					</a>
+				</li>
+				<li ng-class="{'active': (IsLoginState())}">
+					<a ng-click="GoToLoginState()">
+						Login
+					</a>
+				</li>
+				<li ng-class="{'active': (IsRegistrationState())}">
+					<a ng-click="GoToRegistrationState()">
+						Register
+					</a>
+				</li>
+			</ul>
+
+			<!--BREAD CRUMBS-->
+			<section class="breadCrumbContainer">
+				<section class="grid-block">
+					<div class="grid-container">
+						<breadcrumb></breadcrumb>
+					</div>
+				</section>
+			</section>
+		</header>
+	</section>
+
+	<!--PAGE CONTENT INJECTED HERE-->
+	<div ng-transclude></div>
+</section>
